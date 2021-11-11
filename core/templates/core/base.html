@@ -3,7 +3,7 @@
 <html lang="en">
 {% load static %}
 <head>
-	<title>Proyecto Peludos</title>
+	<title>Adoptar Bolivia</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="keywords" content="Pets Care Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -51,7 +51,7 @@
 				</div>
 			</div>
 			<div class="banner-w3text w3layouts">
-				<h2> Proyecto Peludos </h2>
+				<h2> Adoptar Bolivia </h2>
 			</div>
 			<!-- navigation -->
 			<div class="top-nav w3-agiletop">
@@ -63,7 +63,7 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<h1><a href="{% url 'core:index' %}">Peludos</a></h1>
+						<h1><a href="{% url 'core:index' %}">Adoptar Bolivia</a></h1>
 					</div>
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -71,22 +71,12 @@
 							<ul class="nav navbar">
 								<li><a href="{% url 'core:index' %}">Inicio</a></li>
 								<li><a href="{% url 'core:about' %}" class="active">Nosotros</a></li>
-								<li><a href="{% url 'core:gallery' %}">Galeria</a></li>
-								<!-- <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span data-letters="Pages">Pages</span><span class="caret"></span></a>
-									<ul class="dropdown-menu">
-										<li><a href="icons.html">Iconos</a></li>
-										<li><a href="typo.html">Tipografia</a></li>
-									</ul>
-								</li> -->
+								<li><a href="{% url 'galeria:galeria' %}">Galeria</a></li>
+				
 								<li><a href="{% url 'core:contact' %}">Contacto</a></li>
 							</ul>
 						</div>
-						<div class="w3ls-bnr-icons social-icon navbar-right">
-							<a href="#" class="social-button twitter"><i class="fa fa-twitter"></i></a>
-							<a href="#" class="social-button facebook"><i class="fa fa-facebook"></i></a>
-							<a href="#" class="social-button google"><i class="fa fa-google-plus"></i></a>
-							<a href="#" class="social-button dribbble"><i class="fa fa-dribbble"></i></a>
-						</div>
+						
 						<div class="clearfix"> </div>
 					</div>
 				</div>
@@ -114,14 +104,7 @@
 								</div>
 							</form>
 						</div>
-						<div class="login-social-grids">
-							<ul>
-								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fa fa-rss"></i></a></li>
-							</ul>
-						</div>
-						<p><a href="#" data-toggle="modal" data-target="#myModal3"> No tienes una cuenta?</a></p>
+						
 					</div>
 				</div>
 			</div>
@@ -175,9 +158,8 @@
 				<ul>
 					<li><a href="{% url 'core:index' %}">Inicio</a></li>
 					<li><a href="{% url 'core:about' %}">Sobre Nosotros</a></li>
-					<li><a href="{% url 'core:gallery' %}">Galeria</a></li>
-					<!-- <li><a href="icons.html">Iconos</a></li>
-					<li><a href="typo.html">Tipografia</a></li> -->
+					<li><a href="{% url 'galeria:galeria' %}">Galeria</a></li>
+			
 					<li><a href="{% url 'core:contact' %}">Contacto</a></li>
 				</ul>
 			</div>

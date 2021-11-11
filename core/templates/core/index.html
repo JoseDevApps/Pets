@@ -3,7 +3,7 @@
 <html lang="en">
 {% load static %}
 <head>
-	<title>Proyecto Peludos</title>
+	<title>Adoptar Bolivia</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="keywords" content="Pets Care Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -57,7 +57,7 @@
 			<div class="banner-w3text w3layouts">
 				<h3 class="w3ls_agile">Ayudando a nuestras mascotas </h3>
 
-				<h2>Proyecto Peludos</h2>
+				<h2>Adoptar Bolivia</h2>
 			</div>
 			<!-- navigation -->
 			<div class="top-nav w3-agiletop">
@@ -69,7 +69,7 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<h1><a href="{% url 'core:index' %}">Peludos</a></h1>
+						<h1><a href="{% url 'core:index' %}">Adoptar Bolivia</a></h1>
 					</div>
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -77,7 +77,7 @@
 							<ul class="nav navbar">
 								<li><a href="{% url 'core:index' %}" class="active">Inicio</a></li>
 								<li><a href="{% url 'core:about' %}">Nosotros</a></li>
-								<li><a href="{% url 'core:gallery' %}">Galeria</a></li>
+								<li><a href="{% url 'galeria:galeria' %}">Galeria</a></li>
 								<!-- <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span data-letters="Pages">Pages</span><span class="caret"></span></a>
 									<ul class="dropdown-menu">
 										<li><a href="icons.html">Iconos</a></li>
@@ -87,12 +87,7 @@
 								<li><a href="{% url 'core:contact' %}">Contacto</a></li>
 							</ul>
 						</div>
-						<div class="w3ls-bnr-icons social-icon navbar-right">
-							<a href="#" class="social-button twitter"><i class="fa fa-twitter"></i></a>
-							<a href="#" class="social-button facebook"><i class="fa fa-facebook"></i></a>
-							<a href="#" class="social-button google"><i class="fa fa-google-plus"></i></a>
-							<a href="#" class="social-button dribbble"><i class="fa fa-dribbble"></i></a>
-						</div>
+					
 						<div class="clearfix"> </div>
 					</div>
 				</div>
@@ -120,14 +115,7 @@
 								</div>
 							</form>
 						</div>
-						<div class="login-social-grids">
-							<ul>
-								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fa fa-rss"></i></a></li>
-							</ul>
-						</div>
-						<p><a href="#" data-toggle="modal" data-target="#myModal3"> No tienes una cuenta?</a></p>
+						
 					</div>
 				</div>
 			</div>
@@ -171,7 +159,7 @@
 						<h5 class="w3l-subtitle">Quienes somos</h5>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at placerat ante. Praesent nulla nunc, pretium dapibus
 							efficitur in, auctor eget elit. Lorem ipsum dolor sit amet</p>
-						<a href="single.html" class="button button-isi"><span>Leer mas</span><i class="icon glyphicon glyphicon-arrow-right"></i></a>
+						<a href="{% url 'core:about' %}" class="button button-isi"><span>Leer mas</span><i class="icon glyphicon glyphicon-arrow-right"></i></a>
 					</div>
 				</div>
 				<div class="col-md-7 col-sm-7 w3welcome-img">
@@ -179,87 +167,29 @@
 				</div>
 				<div class="clearfix"> </div>
 			</div>
+
 			<div class="welcome-w3lsrow2">
+				{% for post in posts %}
 				<div class="col-sm-3 team-grid">
 					<div class="flip-container">
 						<div class="flipper">
 							<div class="front">
-								<img src="{% static 'core/images/img2.jpg' %}" alt="" />
+								<img src="{{post.image.url}}" alt="" />
 							</div>
 							<div class="back">
-								<h4>Peter Parker</h4>
-								<p>Pet Lover</p>
-								<div class="w3l-social">
-									<ul>
-										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-										<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-										<li><a href="#"><i class="fa fa-rss"></i></a></li>
-									</ul>
-								</div>
+									<a href="{% url 'galeria:category' post.id %}" class="imghvr-hinge-right figure">
+									<h4>{{post.title}}</h4>
+									<p>{{post.resumen}}</p>
+									
+									</a>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-3 team-grid">
-					<div class="flip-container">
-						<div class="flipper">
-							<div class="front">
-								<img src="{% static 'core/images/img3.jpg' %}" alt="" />
-							</div>
-							<div class="back">
-								<h4>Steven Wilson</h4>
-								<p>Pet Lover</p>
-								<div class="w3l-social">
-									<ul>
-										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-										<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-										<li><a href="#"><i class="fa fa-rss"></i></a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-3 team-grid">
-					<div class="flip-container">
-						<div class="flipper">
-							<div class="front">
-								<img src="{% static 'core/images/img4.jpg' %}" alt="" />
-							</div>
-							<div class="back">
-								<h4>Johan Botha</h4>
-								<p>Pet Lover</p>
-								<div class="w3l-social">
-									<ul>
-										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-										<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-										<li><a href="#"><i class="fa fa-rss"></i></a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-3 team-grid">
-					<div class="flip-container">
-						<div class="flipper">
-							<div class="front">
-								<img src="{% static 'core/images/img5.jpg' %}" alt="" />
-							</div>
-							<div class="back">
-								<h4>Mary Jane</h4>
-								<p>Pet Lover</p>
-								<div class="w3l-social">
-									<ul>
-										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-										<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-										<li><a href="#"><i class="fa fa-rss"></i></a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+				{% endfor %}	
+				
+				
+				
 
 				<div class="clearfix"> </div>
 			</div>
@@ -377,7 +307,7 @@
 								<p class="para-agileits-w3layouts">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis suscipit et dui ut cursus. Ut tortor nisi, congue quis
 									orci at, posuere mattis est. Nunc sollicitudin nisi lorem, eget aliquet leo scelerisque eu. Cras placerat, ligula
 									nec bibendum aliquam, nibh massa venenatis leo, at convallis sem est a sapien.consectetur adipiscing elit</p>
-								<a href="single.html" class="button button-isi"><span>Leer mas </span><i class="icon glyphicon glyphicon-arrow-right"></i></a>
+								<a href="{% url 'core:about' %}" class="button button-isi"><span>Leer mas </span><i class="icon glyphicon glyphicon-arrow-right"></i></a>
 							</div>
 						</div>
 
@@ -413,7 +343,7 @@
 								<p class="para-agileits-w3layouts">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis suscipit et dui ut cursus. Ut tortor nisi, congue quis
 									orci at, posuere mattis est. Nunc sollicitudin nisi lorem, eget aliquet leo scelerisque eu. Cras placerat, ligula
 									nec bibendum aliquam, nibh massa venenatis leo, at convallis sem est a sapien.consectetur adipiscing elit</p>
-								<a href="single.html" class="button button-isi"><span>Leer mas  </span> <i class="icon glyphicon glyphicon-arrow-right"></i></a>
+								<a href="{% url 'core:about' %}" class="button button-isi"><span>Leer mas  </span> <i class="icon glyphicon glyphicon-arrow-right"></i></a>
 							</div>
 						</div>
 						<div class="tab4">
@@ -422,7 +352,7 @@
 								<p class="para-agileits-w3layouts">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis suscipit et dui ut cursus. Ut tortor nisi, congue quis
 									orci at, posuere mattis est. Nunc sollicitudin nisi lorem, eget aliquet leo scelerisque eu. Cras placerat, ligula
 									nec bibendum aliquam, nibh massa venenatis leo, at convallis sem est a sapien.consectetur adipiscing elit</p>
-								<a href="single.html" class="button button-isi"><span>Leer mas  </span> <i class="icon glyphicon glyphicon-arrow-right"></i></a>
+								<a href="{% url 'core:about' %}" class="button button-isi"><span>Leer mas  </span> <i class="icon glyphicon glyphicon-arrow-right"></i></a>
 							</div>
 						</div>
 					</div>
@@ -449,9 +379,7 @@
 				<ul>
 					<li><a href="{% url 'core:index' %}">Inicio</a></li>
 					<li><a href="{% url 'core:about' %}">Nosotros</a></li>
-					<li><a href="{% url 'core:gallery' %}">Galeria</a></li>
-					<!-- <li><a href="icons.html">Icons</a></li>
-					<li><a href="typo.html">Typography</a></li> -->
+					<li><a href="{% url 'galeria:galeria' %}">Galeria</a></li>
 					<li><a href="{% url 'core:contact' %}">Contacto</a></li>
 				</ul>
 			</div>

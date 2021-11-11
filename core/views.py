@@ -1,8 +1,14 @@
 from django.views.generic.base import TemplateView
+from django.shortcuts import render, get_object_or_404
+from galeria import models
 
-class HomePageView(TemplateView):
+def HomePageView(request):
+    posts = models.Post.objects.all()
+    return render(request, "core/index.html", {'posts':posts})
 
-    template_name = "core/index.html"
+# class HomePageView(TemplateView):
+
+#     template_name = "core/index.html"
 
 class AboutPageView(TemplateView):
 

@@ -1,0 +1,65 @@
+{% extends 'galeria/base.html' %}
+{% load static %}
+{% block content %}
+
+	<!-- single -->
+	<div class="single welcome">
+		<div class="container">
+	<!-- Titulo -->
+			<h3 class="agileits-title">{{category.title}}</h3>
+
+			<div class="markets-grids">
+				<div class="col-md-7 w3ls_single_left">
+					<div class="w3ls_single_left_grid">
+						<div class="w3ls_single_left_grid_right">
+							<!-- nombre mascota, date -->
+							<h5>{{category.created|date:"SHORT_DATE_FORMAT"}}</h5>
+							<!-- author,  categories-->
+							<ul>
+								<li><span class="fa fa-user" aria-hidden="true"></span><a href="#">Admin</a></li>
+							</ul>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+
+					<div class="w3ls_single_left_grid1">
+					<!-- imagen -->
+						<img src="{{category.image.url}}" alt=" " class="img-responsive" />
+					<!-- contenido -->
+						<p> </p>
+						<div class="w3ls_single_left_grid1_left">
+							<h4>Share On :</h4>
+						</div>
+						<div class="w3ls_single_left_grid1_right">
+							<div class="social-icon">
+								<a href="{{category.contacto}}" target="_blank" class="social-button whatsapp"><i class="fa fa-whatsapp"></i></a>
+								<a href="{{category.facebook}}"  target="_blank" class="social-button facebook"><i class="fa fa-facebook"></i></a>
+							</div>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div class="w3l_admin">
+						<p><i class="fa fa-quote-left"></i>{{category.content}}</p>
+					</div>
+				</div>
+				<div class="col-md-5 w3ls_single_right">
+					<div class="wthree_recent">
+						<h4>Información Canina</h4>
+						<ul>
+							<li><a href="#"><i class="fa fa-check" aria-hidden="true"></i>Sexo</a><span> {{category.sexo}}</span></li>
+							<li><a href="#"><i class="fa fa-check" aria-hidden="true"></i>Edad</a><span> {{category.edad}} añitos</span></li>
+							<li><a href="#"><i class="fa fa-check" aria-hidden="true"></i>Tamaño</a><span> {{category.tamanio}}</span></li>
+							<li><a href="#"><i class="fa fa-check" aria-hidden="true"></i>Esterilizado</a><span> {{category.castrado}}</span></li>
+							<li><a href="#"><i class="fa fa-check" aria-hidden="true"></i>Energía</a><span> {{category.energia}}</span></li>
+						</ul>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			
+		</div>
+	</div>
+	<!-- //single -->
+	
+	
+{% endblock %}

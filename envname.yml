@@ -1,18 +1,24 @@
-name: minusmnaya
+name: djangorest
 channels:
+  - conda-forge
   - anaconda
   - defaults
 dependencies:
   - asgiref=3.3.0=py_0
-  - ca-certificates=2020.10.14=0
-  - certifi=2020.6.20=py38_0
+  - ca-certificates=2021.5.30=h5b45459_0
+  - certifi=2021.5.30=py38haa244fe_0
   - django=3.1.2=py_0
+  - django-filter=2.4.0=py_0
+  - djangorestframework=3.12.4=pyhd8ed1ab_0
+  - importlib-metadata=2.0.0=py_1
   - krb5=1.17.1=hc04afaa_0
   - libpq=12.2=h3235a2c_0
-  - openssl=1.1.1l=h2bbff1b_0
+  - markdown=3.3.2=py38_0
+  - openssl=1.1.1l=h8ffe710_0
   - pip=21.0.1=py38haa95532_0
   - psycopg2=2.8.5=py38h7a1dbc1_0
   - python=3.8.11=h6244533_1
+  - python_abi=3.8=2_cp38
   - pytz=2020.1=py_0
   - setuptools=52.0.0=py38haa95532_0
   - sqlite=3.36.0=h2bbff1b_0
@@ -20,7 +26,20 @@ dependencies:
   - tk=8.6.10=he774522_0
   - vc=14.2=h21ff451_1
   - vs2015_runtime=14.27.29016=h5e58377_2
-  - wheel=0.37.0=pyhd3eb1b0_0
+  - wheel=0.37.0=pyhd3eb1b0_1
   - wincertstore=0.2=py38_0
+  - zipp=3.3.1=py_0
   - zlib=1.2.11=vc14h1cdd9ab_1
-prefix: D:\Anaconda\envs\minusmnaya
+  - pip:
+    - backports-entry-points-selectable==1.1.0
+    - distlib==0.3.3
+    - django-ckeditor==6.1.0
+    - django-js-asset==1.2.2
+    - filelock==3.3.2
+    - pillow==8.4.0
+    - pipenv==2021.11.5.post0
+    - platformdirs==2.4.0
+    - six==1.16.0
+    - virtualenv==20.10.0
+    - virtualenv-clone==0.5.7
+prefix: D:\Anaconda\envs\djangorest
