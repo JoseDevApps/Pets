@@ -42,4 +42,4 @@ dependencies:
     - six==1.16.0
     - virtualenv==20.10.0
     - virtualenv-clone==0.5.7
-prefix: D:\Anaconda\envs\djangorest
+
