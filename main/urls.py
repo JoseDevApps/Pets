@@ -19,6 +19,9 @@ from django.conf import settings
 urlpatterns = [
     path('',include('core.urls')),
     path('galeria/', include('galeria.urls')),
+    # Paths de auth
+    path('accounts/', include('django.contrib.auth.urls')),
+    
     path('admin/', admin.site.urls),
 ]
 

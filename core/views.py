@@ -3,8 +3,10 @@ from django.shortcuts import render, get_object_or_404
 from galeria import models
 
 def HomePageView(request):
-    posts = models.Post.objects.all()
-    return render(request, "core/index.html", {'posts':posts})
+    # posts = models.Post.objects.all()
+    last_three= models.Post.objects.all().order_by('-id')[:4]
+    last_three_in_ascending_order = reversed(last_three)
+    return render(request, "core/index.html", {'posts':last_three_in_ascending_order})
 
 # class HomePageView(TemplateView):
 
@@ -21,4 +23,5 @@ class GalleryPageView(TemplateView):
 class ContactPageView(TemplateView):
 
     template_name = "core/contact.html"
+
 
