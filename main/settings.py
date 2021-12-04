@@ -25,7 +25,7 @@ SECRET_KEY = '8aaqsjmderilp&#cy^a)ky1!3z@x&m_=mj3m3m_h%7nlh5c9g4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['137.184.96.194', '127.0.0.1', '0.0.0.0']
+ALLOWED_HOSTS = ['67.205.154.124', '127.0.0.1', '0.0.0.0', 'adoptarbolivia.com']
 
 
 # Application definition
